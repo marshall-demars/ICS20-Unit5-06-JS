@@ -14,8 +14,22 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function displays an alert.
+ * This function calculates if you get free admission
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  // input
+  var firstInteger = document.getElementById("integer-one").value
+  var secondInteger = document.getElementById("integer-two").value
+
+  
+    // process and output
+  let counter = 0
+  var answer = 0
+  var firstIntegerAsInt = parseInt(firstInteger)
+  while (counter < secondInteger) {
+    console.log("Once through loop:" + counter)
+    answer = answer + firstIntegerAsInt
+    counter++
+  }
+  document.getElementById("loop").innerHTML = "The number is " + (answer)
 }
