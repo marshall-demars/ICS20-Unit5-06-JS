@@ -26,10 +26,14 @@ function myButtonClicked() {
   let counter = 0
   var answer = 0
   var firstIntegerAsInt = parseInt(firstInteger)
-  while (counter < secondInteger) {
-    console.log("Once through loop:" + counter)
-    answer = answer + firstIntegerAsInt
-    counter++
+  if ((firstInteger <= 0) || (secondInteger <= 0)) {
+    document.getElementById("loop").innerHTML = 'Please input a positive number.'
+  } else {
+    while (counter < secondInteger) {
+      console.log("Once through loop:" + counter)
+      answer = answer + firstIntegerAsInt
+      counter++
+    }
+     document.getElementById("loop").innerHTML = "The number is " + (answer)
   }
-  document.getElementById("loop").innerHTML = "The number is " + (answer)
 }
